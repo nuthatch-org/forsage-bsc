@@ -1,0 +1,461 @@
+{
+  "registry_hash": "0xd348c40f5a5a43197bec73d3bac0739bd5a2684796ac8fdd39a588ef98473d7c",
+  "tables": [
+    {
+      "alias": "forsage",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "receiver",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "from",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "matrix",
+          "sol_type": "uint8",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "level",
+          "sol_type": "uint8",
+          "storage": "u64"
+        }
+      ],
+      "event": "MissedEthReceive(address,address,uint8,uint8)",
+      "table": "forsage__missed_eth_receive",
+      "topic0": "0xfc0cb63f8dbd6b20ceb84a3c5358a41576a1479e6ecd040b4b985525dc09a709"
+    },
+    {
+      "alias": "forsage",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "user",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "referrer",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "matrix",
+          "sol_type": "uint8",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "level",
+          "sol_type": "uint8",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "place",
+          "sol_type": "uint8",
+          "storage": "u64"
+        }
+      ],
+      "event": "NewUserPlace(address,address,uint8,uint8,uint8)",
+      "table": "forsage__new_user_place",
+      "topic0": "0x68062c5925c4317adf3a7095478d28b33fd8b41458bc7620b61bc46bf1b24d82"
+    },
+    {
+      "alias": "forsage",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "user",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "referrer",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "userId",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "referrerId",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "Registration(address,address,uint256,uint256)",
+      "table": "forsage__registration",
+      "topic0": "0x309bb360e8b69c23937ccc5fb01f9aeeead1c95a99604e175113ff82f2b1723a"
+    },
+    {
+      "alias": "forsage",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "user",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "currentReferrer",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "caller",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "matrix",
+          "sol_type": "uint8",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "level",
+          "sol_type": "uint8",
+          "storage": "u64"
+        }
+      ],
+      "event": "Reinvest(address,address,address,uint8,uint8)",
+      "table": "forsage__reinvest",
+      "topic0": "0xa00c953eff38ec1b71e7fe060b2ab8df0bbe5354319fbdde4fbdafd6324386a6"
+    },
+    {
+      "alias": "forsage",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "from",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "receiver",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "matrix",
+          "sol_type": "uint8",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "level",
+          "sol_type": "uint8",
+          "storage": "u64"
+        }
+      ],
+      "event": "SentExtraEthDividends(address,address,uint8,uint8)",
+      "table": "forsage__sent_extra_eth_dividends",
+      "topic0": "0xf0ddc65c0d411f042f723dcfa1b7d13e85a35b7b70761d447c6500411cacf328"
+    },
+    {
+      "alias": "forsage",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "user",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "referrer",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "matrix",
+          "sol_type": "uint8",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "level",
+          "sol_type": "uint8",
+          "storage": "u64"
+        }
+      ],
+      "event": "Upgrade(address,address,uint8,uint8)",
+      "table": "forsage__upgrade",
+      "topic0": "0x18a92df19fd94d6cfff209966673a5ca05a1c8e2bb68e097fce2bdc2ed811119"
+    }
+  ]
+}

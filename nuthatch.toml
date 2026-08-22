@@ -1,0 +1,23 @@
+[nest]
+name = "forsage-bsc"
+chain = "bsc"
+chain_id = 56
+# A keyless public endpoint, so this file is publishable: `nuthatch.toml` is pinned into the nest's
+# content address and must never carry a credential. It is enough to follow the tip. A *backfill*
+# needs archive depth this endpoint may not have - pass your own with `--rpc`, and check it first
+# with `nuthatch doctor --rpc <url>`.
+rpc_urls = [
+    "https://bsc-rpc.publicnode.com",
+]
+schema_version = 1
+block_timestamps = true
+
+# A third proxy pattern, and neither of the two the other nests hit. Forsage's proxy exposes no
+# `implementation()` (it reverts) and its EIP-1967 slot is empty; the implementation is behind a
+# bespoke `impl()` getter, which answers `0x03d26c28...`. Resolving the proxy address directly gives
+# an ABI of seven entries and *no events at all*, so the nest scaffolds to zero tables and indexes
+# nothing. The address indexed below is still the proxy - that is where the logs are emitted from.
+[[contracts]]
+alias = "forsage"
+address = "0x5acc84a3e955bdd76467d3348077d003f00ffb97"
+abi = "abis/forsage.json"

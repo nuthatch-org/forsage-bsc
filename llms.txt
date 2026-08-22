@@ -1,0 +1,27 @@
+# nuthatch nest on bsc
+
+A self-hosted blockchain index. Query it locally; there is no third-party API.
+
+## Contracts
+- `forsage` = 0x5acc84a3e955bdd76467d3348077d003f00ffb97
+
+## Tables (one per contract event)
+- `forsage__missed_eth_receive` - MissedEthReceive(address,address,uint8,uint8) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, receiver, from, matrix, level)
+- `forsage__new_user_place` - NewUserPlace(address,address,uint8,uint8,uint8) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, user, referrer, matrix, level, place)
+- `forsage__registration` - Registration(address,address,uint256,uint256) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, user, referrer, userId, referrerId)
+- `forsage__reinvest` - Reinvest(address,address,address,uint8,uint8) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, user, currentReferrer, caller, matrix, level)
+- `forsage__sent_extra_eth_dividends` - SentExtraEthDividends(address,address,uint8,uint8) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, from, receiver, matrix, level)
+- `forsage__upgrade` - Upgrade(address,address,uint8,uint8) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, user, referrer, matrix, level)
+
+## Live HTTP API (run `nuthatch dev`)
+- `GET /`                    index status
+- `GET /tables`              every table with its columns
+- `GET /table/{name}?limit=N` recent rows of one table (hot + sealed)
+- `GET /entity/{id}`         one row by id (`{block:012}-{logindex:06}`)
+- `GET /sql?q=SELECT...`     read-only SQL; each table is a view named `{alias}__{event}`
+- `GET /balances?limit=N`    top holder balances (when an ERC-20 Transfer table is present)
+- `GET /balance/{address}`   one address's derived balance
+
+## MCP (for coding agents)
+Run `nuthatch mcp` (stdio) to expose tools: status, schema, tables, table, sql, entity,
+balance, top_balances. Fully offline against the local instance; nothing phones home.
