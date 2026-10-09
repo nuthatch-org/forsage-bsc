@@ -1,6 +1,6 @@
 # forsage-bsc
 
-A [nuthatch](https://github.com/nightswatchhq/nuthatch) nest: **Forsage x2 on BNB Smart Chain**.
+A [nuthatch](https://github.com/nuthatch-org/nuthatch) nest: **Forsage x2 on BNB Smart Chain**.
 
 Registrations, matrix placements, reinvestments and upgrades.
 
@@ -25,7 +25,7 @@ Indexed blocks **117,363,360 to 117,463,358** and sealed **575 events**. Every t
 ## Run it
 
 ```sh
-nuthatch init --from https://github.com/nightswatchhq/forsage-bsc
+nuthatch init --from https://github.com/nuthatch-org/forsage-bsc
 cd forsage-bsc
 nuthatch dev --dir . --backfill 50000 --seal-direct
 nuthatch sql --dir . "SELECT count(*) FROM \"forsage__missed_eth_receive\""
